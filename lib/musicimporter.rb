@@ -1,0 +1,14 @@
+class MusicImporter 
+  attr_accessor :path, :files 
+  def initialize(path)
+    @path = path
+  end 
+  
+  def files
+    Dir.glob("*.mp3", base: "#{@path}")
+  end 
+  
+  def self.import 
+    self.files.collect {|filename| Song.new_from_filename(filename)}
+  end 
+end 
