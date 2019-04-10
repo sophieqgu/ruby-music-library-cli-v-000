@@ -57,6 +57,6 @@ class MusicLibraryController
   def list_songs_by_artist 
     "Please enter the name of an artist:"
     input = gets.strip 
-    if Songs.all.include?(input)
+    if Artist.all.include?(input)
     
 end 
