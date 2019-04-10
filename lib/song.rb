@@ -49,7 +49,7 @@ class Song
     artist, @name, genre = parts[0], parts[1], parts[2].gsub(".mp3", "")
     @artist = Artist.find_or_create_by_name(artist)
     @genre = Genre.find_or_create_by_name(genre)
-    song = self.new(@name, @artist, @genre) 
+    self.new(@name, @artist, @genre) 
   end 
   
   def self.create_from_filename(filename)
