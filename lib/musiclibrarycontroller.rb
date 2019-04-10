@@ -43,5 +43,5 @@ class MusicLibraryController
   end 
   
   def list_artists
-    
+    Artist.all.sort_by(&:name).each.with_index
 end 
