@@ -9,6 +9,6 @@ class MusicImporter
   end 
   
   def self.import 
-    self.files.collect {|filename| Song.create_from_filename(filename)}
+    files.collect {|filename| Song.create_from_filename(filename)}
   end 
 end 
